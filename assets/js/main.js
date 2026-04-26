@@ -241,6 +241,24 @@
 
 
   /**
+   * Comportamento do Menu e Header ao rolar a tela
+   */
+  const header = document.getElementById('header');
+  const logo = document.getElementById('logo');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+      logo.src = 'assets/img/logo-dark.png';
+    } else {
+      header.classList.remove('scrolled');
+      logo.src = 'assets/img/logo-white.png';
+    }
+  });
+
+
+
+  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
