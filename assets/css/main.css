@@ -247,8 +247,18 @@ h6 {
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 /* Menu no topo (branco) */
-.header:not(.scrolled) .navmenu a {
-  color: #ffffff !important;
+.header:not(.scrolled) .navmenu > ul > li > a {
+  color: #ffffff;
+}
+
+/* Ícone mobile branco no topo */
+.header:not(.scrolled) .mobile-nav-toggle {
+  color: #ffffff;
+}
+
+/* Ícone escuro ao rolar */
+.header.scrolled .mobile-nav-toggle {
+  color: #333;
 }
 
 
@@ -330,9 +340,11 @@ h6 {
     transform: scale(1);
   }
 
-  .navmenu>ul>li:hover>a i {
+  /* .navmenu>ul>li:hover>a i { */
+  .navmenu > ul > li:hover > a .toggle-dropdown {
     transform: rotate(180deg);
   }
+  
 
   .navmenu .dropdown ul {
     margin: 0;
@@ -1051,7 +1063,7 @@ section,
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
-  top:-95px;
+  top:-92px;
   height: 100vh;
 }
 
@@ -1075,6 +1087,12 @@ section,
   height: 80%;
   background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 94%) 0%, transparent 60%);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height:70vh;
+  }
 }
 
 .hero .hero-content {
@@ -7302,4 +7320,20 @@ section,
 .gallery-next,
 .gallery-prev {
   color: #fff;
+}
+
+
+
+
+/* MOBILE - menu aberto com texto escuro */
+@media (max-width: 1199px) {
+
+  body.mobile-nav-active .navmenu ul a {
+    color: #333 !important;
+  }
+
+  body.mobile-nav-active .navmenu ul a:hover {
+    color: var(--accent-color) !important;
+  }
+
 }
