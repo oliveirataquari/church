@@ -171,6 +171,9 @@ h6 {
   z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   transition: all 0.4s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header .logo {
@@ -1062,12 +1065,17 @@ section,
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  /* background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%); */
   top:-92px;
   height: 100vh;
+  align-items: center;     /* centraliza vertical */
+  display: flex;
 }
 
-.hero::before {
+
+
+/* Aqui faz um gradiente de cores ao fundo do Hero */
+/* .hero::before {
   content: "";
   position: absolute;
   bottom: -30%;
@@ -1077,7 +1085,6 @@ section,
   background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 92%) 0%, transparent 70%);
   pointer-events: none;
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -1088,10 +1095,12 @@ section,
   background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 94%) 0%, transparent 60%);
   pointer-events: none;
 }
+*/
 
 @media (max-width: 768px) {
   .hero {
     height:70vh;
+    display: block;
   }
 }
 
@@ -1150,7 +1159,7 @@ section,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:100%;
   background: color-mix(in srgb, #000, transparent 50%);
   z-index: 2;
 }
