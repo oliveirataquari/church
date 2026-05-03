@@ -297,7 +297,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     font-size: 16px !important;
-    padding: 18px 17px;
+    padding: 14px 18px;
     font-family: var(--nav-font);
     font-weight: 600 !important;
     display: flex;
@@ -310,7 +310,7 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 0;
     margin-left: 5px;
     transition: transform 0.3s ease;
@@ -319,15 +319,16 @@ h6 {
   .navmenu>ul>li>a::after {
     content: "";
     position: absolute;
-    left: 18px;
-    bottom: 8px !important;
-    width: 8px !important;
-    height: 8px !important;
+    left: 20%;
+    bottom: 1px !important;
+    width: 60% !important;
+    height: 2px !important;
     background: var(--accent2-color) !important;
     border-radius: 50%;
     opacity: 0;
     transform: scale(0);
     transition: all 0.3s ease;
+    opacity: .5 !important;
   }
 
   .navmenu>ul>li>a:hover,
@@ -1011,7 +1012,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 80px 0;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 83px;
   overflow: clip;
 }
 @media (max-width: 1199px) {
@@ -1061,18 +1062,17 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 .hero {
-  padding: 120px 0 80px;
+  padding: 120px 0 60px 0;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
-  /* background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%); */
-  top:-92px;
-  height: 100vh;
-  align-items: center;     /* centraliza vertical */
   display: flex;
+  align-items: center;
+  overflow: hidden;
+  top:-84px;
+  margin-bottom:-84px;
 }
-
-
 
 /* Aqui faz um gradiente de cores ao fundo do Hero */
 /* .hero::before {
@@ -1099,14 +1099,23 @@ section,
 
 @media (max-width: 768px) {
   .hero {
-    height:70vh;
-    display: block;
+    min-height: 80vh;
+    /* display: block; */
   }
 }
 
+
 .hero .hero-content {
+  width: 100%;
   position: relative;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  color: #fff;
+}
+
+.hero .hero-content h1 {
+  color: #fff;
 }
 
 .hero .hero-content .hero-tag {
@@ -1356,6 +1365,54 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 35%);
 }
 
+.hero .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .hero-buttons .btn {
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.hero .hero-buttons .btn.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.hero .hero-buttons .btn.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  border-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-2px);
+}
+
+.hero .hero-buttons .btn.btn-outline {
+  background-color: transparent;
+  color: color-mix(in srgb, #fff, transparent 20%);
+  border-color: color-mix(in srgb, #fff, transparent 50%);
+}
+
+.hero .hero-buttons .btn.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+@media (max-width: 576px) {
+  .hero .hero-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
 @keyframes pulse {
 
   0%,
@@ -1370,25 +1427,6 @@ section,
   }
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding: 100px 0 60px;
-  }
-
-  .hero .hero-content {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
-  .hero .hero-content .hero-text {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero .hero-content .hero-cta {
-    justify-content: center;
-  }
-}
 
 
 
