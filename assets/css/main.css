@@ -302,7 +302,7 @@ h6 {
     font-weight: 600 !important;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     white-space: nowrap;
     transition: all 0.3s ease;
     position: relative;
@@ -497,6 +497,10 @@ h6 {
     transition: all 0.3s ease;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     position: relative;
+  }
+
+  .nobetween a {
+    justify-content:left !important;
   }
 
   .navmenu a::before,
@@ -1099,7 +1103,7 @@ section,
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 70vh;
     /* display: block; */
   }
 }
