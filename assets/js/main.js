@@ -233,10 +233,20 @@
 
       breakpoints: {
         768: {
-          slidesPerView: 1 /* Numero de slides na tela */
+          slidesPerView: 3 /* Numero de slides na tela */
         }
       }
     });
+  });
+
+
+  /**
+   * Modal da galeria de imagens:
+   */  
+  document.getElementById('galleryModal').addEventListener('show.bs.modal', function (e) {
+    const img = e.relatedTarget; // elemento que disparou o modal
+    document.getElementById('galleryModalImg').src = img.src;
+    document.getElementById('galleryModalLegenda').textContent = img.dataset.legenda || '';
   });
 
 
@@ -255,7 +265,6 @@
       logo.src = 'assets/img/logo-white.png';
     }
   });
-
 
 
   /**

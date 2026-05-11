@@ -135,7 +135,8 @@
 
               <h3 class="gradient-font">O início</h3>
               <p class="mb-4 description">
-                Somos uma igreja cristã dedicada a viver e compartilhar o amor de Deus. Nosso propósito é acolher pessoas, fortalecer famílias e levar esperança através da Palavra.
+                Somos uma igreja cristã dedicada a viver e compartilhar o amor de Deus. Nosso propósito é acolher 
+                pessoas, fortalecer famílias e levar esperança através da Palavra.
                 <br />Aqui você encontra um ambiente simples, sincero e cheio de fé
               </p>
 
@@ -158,9 +159,8 @@
                 </div>
               </div>
 
-
           <div class="col-xl-6 aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-images-wrapper">
+            <div class="about-images-wrapper hide">
               <div class="image-main">
                 <img src="assets/img/fachada1.jpg" alt="Business meeting" class="img-fluid">
               </div>
@@ -219,7 +219,6 @@
 
         </div>
 
-
         <!-- GALERIA DE IMAGENS -->
         <div class="col-lg" data-aos="fade-left" data-aos-delay="200">
           <div class="gallery-carousel swiper myGallerySwiper">
@@ -229,25 +228,25 @@
               <!-- Slide -->
               <div class="swiper-slide">
                 <div class="gallery-item">
-                  <img src="assets/img/gallery/gallery-01.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-01.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#galleryModal" data-legenda="Sua legenda aqui 1" >
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="gallery-item">
-                  <img src="assets/img/gallery/gallery-02.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-02.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#galleryModal" data-legenda="Sua legenda aqui 2" >
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="gallery-item">
-                  <img src="assets/img/gallery/gallery-03.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-03.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#galleryModal" data-legenda="Sua legenda aqui 3">
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="gallery-item">
-                  <img src="assets/img/gallery/gallery-04.jpg" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/gallery-04.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#galleryModal" data-legenda="Sua legenda aqui 4">
                 </div>
               </div>
 
@@ -263,7 +262,6 @@
         </div>
 
         <!-- FIM GALERIA-->
-
 
       </div>
 
@@ -1154,6 +1152,20 @@
     </div>
 
   </footer>
+
+  <!-- MODAL GALERIA -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"></button>
+          <img id="galleryModalImg" src="" class="img-fluid rounded" alt="">
+          <p id="galleryModalLegenda" class="text-white text-center mt-2 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM MODAL GALERIA -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
