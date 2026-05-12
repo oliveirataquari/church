@@ -203,6 +203,7 @@
   });
 
 
+
   /**
    * Frequently Asked Questions Toggle (Add Tiago)
    */
@@ -213,8 +214,11 @@
   });
 
 
+
+
+
   /**
-   * Galeria de imagens carousel (Add Tiago)
+   * Galeria de imagens do carousel (Add Tiago)
    */
   document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".myGallerySwiper", {
@@ -240,14 +244,9 @@
   });
 
 
-  /**
-   * Modal da galeria de imagens:
-   */  
-  document.getElementById('galleryModal').addEventListener('show.bs.modal', function (e) {
-    const img = e.relatedTarget; // elemento que disparou o modal
-    document.getElementById('galleryModalImg').src = img.src;
-    document.getElementById('galleryModalLegenda').textContent = img.dataset.legenda || '';
-  });
+
+
+
 
 
   /**
