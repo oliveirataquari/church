@@ -7318,16 +7318,19 @@ section,
 
 
 /* Modal Glightbox (janela do botão contato no Header) */
-.gprev,
-.gnext {
+/* Oculta setas quando o conteúdo for externo (iframe) */
+/* .gnext,
+.gprev {
   display: none !important;
-}
+} */
+
+
 .gslide-external {
   border-radius: 10px;
   overflow: hidden; /* MUITO IMPORTANTE */
 }
 .goverlay {
-  background: rgba(0, 0, 0, 0.75) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 .gclose svg {
   width: 32px !important;
@@ -7337,6 +7340,7 @@ section,
   top: 30px !important;   /* mais para baixo */
   right: 30px !important; /* mais para a esquerda */
 }
+
 
 
 
@@ -7354,6 +7358,7 @@ section,
   object-fit: cover;
   transition: 0.4s;
   cursor: pointer;
+  border-radius: 8px;
 }
 @media (max-width: 767.98px) {
   .gallery-item img {
@@ -7362,7 +7367,7 @@ section,
   }
 }
  .gallery-item:hover img {
-  transform: scale(1.08);
+  /* transform: scale(1.08); */
 } 
 /* Estilo das setas */
 .gallery-next,
@@ -7370,7 +7375,25 @@ section,
   color: #fff;
 }
 
+.gslide-image img {
+  border-radius: 10px;
+}
+.gallery-caption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 10px;
+}
+/* legenda caption da imagem modal */
+.gslide-description.description-bottom {
+  margin-top:-15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
+.swiper-button-prev,.swiper-button-next {
+  margin-top:-45px;
+}
 
 
 /* MOBILE - menu aberto com texto escuro */

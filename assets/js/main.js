@@ -104,12 +104,28 @@
   }
   window.addEventListener('load', aosInit);
 
+
   /**
-   * Initiate glightbox
+   * Initiate glightbox (1º paragrafo é para legendas caption no modal da img)
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
+    document.querySelectorAll('.gallery-item').forEach(item => {
+    const link = item.querySelector('.glightbox');
+    const caption = item.querySelector('.gallery-caption');
+    if (link && caption) {
+      link.setAttribute('data-description', caption.textContent);
+    }
   });
+
+  const glightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true  // swipe no mobile
+  });
+
+  // Instância isolada para o botão Contato
+  const lightboxExternal = GLightbox({ selector: '.glightbox-external' });
+
+
+
 
   /**
    * Init isotope layout and filters
@@ -184,6 +200,7 @@
 
   window.addEventListener("load", initSwiper);
 
+
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
@@ -246,9 +263,6 @@
 
 
 
-
-
-
   /**
    * Comportamento do Menu e Header ao rolar a tela
    */
@@ -264,6 +278,7 @@
       logo.src = 'assets/img/logo-white.png';
     }
   });
+
 
 
   /**
