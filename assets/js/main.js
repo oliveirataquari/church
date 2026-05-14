@@ -121,7 +121,7 @@
     touchNavigation: true  // swipe no mobile
   });
 
-  // Instância isolada para o botão Contato
+  // Instância isolada para o botão Contato (sem setas de navegação habilitadas)
   const lightboxExternal = GLightbox({ selector: '.glightbox-external' });
 
 
@@ -245,6 +245,7 @@
         delay: 3000,
       },
       slidesPerView: 1,
+      slidesPerGroup: 1,
       spaceBetween: 20,
 
       navigation: {
@@ -254,7 +255,8 @@
 
       breakpoints: {
         768: {
-          slidesPerView: 3 /* Numero de slides na tela */
+          slidesPerView: 3, /* Numero de slides na tela */
+          slidesPerGroup: 1 /* Numero de slides rodando ao clicar nas setas */
         }
       }
     });

@@ -78,8 +78,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted glightbox-external" href="atendimento.html"
-        data-glightbox="type: external; width:85vw; height:85vh"><i class="bi bi-whatsapp"></i> Contato</a>
+      <a class="btn-getstarted glightbox-external" href="atendimento.html" data-glightbox="type: external; width:85vw; height:85vh"><i class="bi bi-whatsapp"></i> Contato</a>
 
     </div>
   </header>
@@ -105,7 +104,7 @@
           <div class="row justify-content-center text-center">
             <div class="col-lg-8">
               <h1 data-aos="fade-up" data-aos-delay="100">Um lugar para recomeçar, crescer e viver a fé</h1>
-              <!-- <p data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p> -->
+              <h3 data-aos="fade-up" data-aos-delay="200">Cultos todas as quartas (20h) e domingos (18h).</h3>
               <div class="hero-buttons pt-4" data-aos="fade-up" data-aos-delay="300">
                 <a href="#about" class="btn btn-primary">Peça uma oração</a>
                 <a href="#services" class="btn btn-outline">Venha nos visitar</a>
@@ -195,6 +194,7 @@
 
         </div>
 
+
         <!-- GALERIA DE IMAGENS -->
         <div class="col-lg" data-aos="fade-left" data-aos-delay="100">
 
@@ -223,7 +223,7 @@
                   <a href="assets/img/gallery/gallery-02.jpg" class="glightbox" data-gallery="myGallery">
                     <img src="assets/img/gallery/gallery-02.jpg" class="img-fluid" alt="">
                   </a>
-                  <p class="gallery-caption">Legenda da foto 2</p>
+                  <p class="gallery-caption">Somos uma igreja cristã dedicada a viver e compartilhar o amor de Deus.</p>
                 </div>
               </div>
 
@@ -256,8 +256,9 @@
     </section><!-- /About Section -->
 
 
+
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="cultos" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -331,13 +332,18 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2 class="gradient-font">Agenda de eventos</h2>
-        <p>confira abaixo.</p>
+        <!-- <p>confira abaixo.</p> -->
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        
-        <iframe style="border-radius:10px;" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FSao_Paulo&showPrint=0&showTz=0&title=AgendaIgreja&showCalendars=0&hl=pt_BR&mode=MONTH&showTitle=0&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986cb" style="border-width:0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
-
+        <!-- Apenas em desktop -->
+        <div class="d-none d-md-block">        
+          <iframe style="border-radius:10px;" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FSao_Paulo&showPrint=0&showTz=0&title=AgendaIgreja&showCalendars=0&hl=pt_BR&mode=MONTH&showTitle=0&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986cb" style="border-width:0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- Apenas em mobile -->
+        <div class="d-block d-md-none text-center">        
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FSao_Paulo&showPrint=0&showTz=0&title=AgendaIgreja&showCalendars=0&hl=pt_BR&mode=AGENDA&showTitle=0&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986cb" style="border-width:0" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
+        </div>
       </div>
 
     </section><!-- /Team Section -->
